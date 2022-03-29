@@ -28,3 +28,10 @@ h2 {
     width: 350px;
 }
 
+#removeTaskButton {
+    background-color: darkslategrey;
+}
+
+#editTaskButton {
+    background-color: blanchedalmond;
+}

@@ -1,4 +1,4 @@
-// Query Selectors
+// ***Query Selectors***
 const toDoForm = document.querySelector("#toDoForm");
 const label = document.querySelector("#label");
 const userInput = document.querySelector("#userInput");
@@ -7,11 +7,9 @@ const removeCompleteButton = document.querySelector("#removeCompleteButton");
 const removeAllButton = document.querySelector("#removeAllButton");
 const toDoList = document.querySelector("#toDoList");
 
-// Variables
+// ***Event Listeners***
 
-
-// Event Listeners
-
+// Add task to list AND toggle completion of tasks
 toDoForm.addEventListener("submit", function(event) {
     event.preventDefault();
     let inputValue = userInput.value;
@@ -33,6 +31,7 @@ toDoForm.addEventListener("submit", function(event) {
     toDoForm.reset();
 })
 
+// Remove completed tasks
 removeCompleteButton.addEventListener("click", function() {
     const toDoList = document.querySelectorAll("#toDoList div");
     for (let i = 0; i < toDoList.length; i++) {
@@ -43,10 +42,27 @@ removeCompleteButton.addEventListener("click", function() {
     }
 })
 
+// Remove all tasks
 removeAllButton.addEventListener("click", function() {
     const toDoList = document.querySelectorAll("#toDoList div");
     for (let i = 0; i < toDoList.length; i++) {
         const items = toDoList[i];
             items.remove();
     }
+})
+
+// ***STRETCHIES***
+
+const removeTaskButton = document.querySelector("#removeTaskButton");
+const editTaskButton = document.querySelector("#editTaskButton");
+let editTask = false;
+let removeTask = false;
+
+
+removeTaskButton.addEventListener("click", function () {
+    editTask = true;
+})
+
+editTaskButton.addEventListener("click", function() {
+    removeTask = 
 })
