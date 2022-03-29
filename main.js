@@ -59,11 +59,12 @@ const editTaskButton = document.querySelector("#editTaskButton");
 let editTask = false;
 let removeTask = false;
 
-
+//  Remove a task ** Must click button, then task to be removed **
 removeTaskButton.addEventListener("click", function () {
     removeTask = true;
 })
 
+// Edit a Task ** Must click button, then task to be edited **
 editTaskButton.addEventListener("click", function() {
     editTask = true;
 })
