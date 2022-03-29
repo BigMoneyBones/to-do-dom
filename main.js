@@ -55,14 +55,28 @@ removeAllButton.addEventListener("click", function() {
 
 const removeTaskButton = document.querySelector("#removeTaskButton");
 const editTaskButton = document.querySelector("#editTaskButton");
+
 let editTask = false;
 let removeTask = false;
 
 
 removeTaskButton.addEventListener("click", function () {
-    editTask = true;
+    removeTask = true;
 })
 
 editTaskButton.addEventListener("click", function() {
-    removeTask = 
+    editTask = true;
+})
+
+toDoList.addEventListener("click", function (event) {
+    if (removeTask === true) {
+        event.target.remove();
+        removeTask = false;
+    }
+    if (editTask === true) {
+        const edit = prompt("Edit your task: ");
+        event.target.innerHTML = edit;
+        event.target.style.textDecoration = "";
+        editTask = false;
+    }
 })
